@@ -37,3 +37,13 @@ const calculateShippingCost = (weight, location, expedited = false) => {
 console.log(calculateShippingCost(10, "USA", true));
 console.log(calculateShippingCost(5, "Canada", false));
 // Prints the shipping cost to the console.
+
+//Task 5: Business Loan Interest Calculation
+function calculateLoanInterest(principal, rate, years) {
+    let interest = (principal * rate * years);
+    return `Total Interest: $${interest.toFixed(2)}`;
+}; // Created a function that calculates the total interest accrued.
+
+console.log(calculateLoanInterest(1000, 0.05, 3)); // Expected output: "Total Interest: $150.00"
+console.log(calculateLoanInterest(5000, 0.07, 5)); // Expected output: "Total Interest: $1750.00"
+// Prints the total interest to the console.
