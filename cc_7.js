@@ -26,3 +26,14 @@ const calculateLoyaltyDiscount = (amount, years) => {
 console.log(calculateLoyaltyDiscount(100, 6)); // Expected output: "Discounted Price: $85.00"
 console.log(calculateLoyaltyDiscount(200, 2)); // Expected output: "Discounted Price: $190.00"
 // Prints the loyalty discount price to the console.
+
+//Task 4: Product Shipping Cost Calculation
+const calculateShippingCost = (weight, location, expedited = false) => {
+    let initialPrice = location === "USA" ? 5 + 0.5 * weight : 10 + 0.7 * weight;
+    let totalPrice = (expedited ? initialPrice + 10 : initialPrice);
+    return `Shipping Cost: $${totalPrice.toFixed(2)}`;
+}; // Created a function that calculates shipping cost based on specific factors and applies a fee depending.
+
+console.log(calculateShippingCost(10, "USA", true));
+console.log(calculateShippingCost(5, "Canada", false));
+// Prints the shipping cost to the console.
