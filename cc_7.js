@@ -56,3 +56,18 @@ function filterHighValueTransactions(transactions, filterFunction) {     // Expe
 
 console.log(filterHighValueTransactions(transactions, amount => amount > 1000)); // Expected output: [1200, 3000, 2200]
 // Logged the filtered transactions to the console.
+
+//Task 7: Budget Tracker
+function createBudgetTracker() {
+let balance = 0;
+    return function(balTotal) {
+        balance -= balTotal;
+        return `Current Balance: $${balance}`;
+    };
+}; // Created a function that added expenses and returned the total remaining balance.
+    
+let budget = createBudgetTracker();
+
+console.log(budget(300)); // Expected output: "Current Balance: -$300"
+console.log(budget(200)); // Expected output: "Current Balance: -$500"
+// Prints the total balance to the console.
